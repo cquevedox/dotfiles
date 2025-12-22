@@ -1,0 +1,11 @@
+# yazi.toml
+[mgr]
+show_hidden = true
+
+[opener]
+edit = [
+	{ run = 'vim "$@"', block = true, for = "unix" },
+]
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open" },
+]

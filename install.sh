@@ -26,6 +26,7 @@ echo ":link: Creating symlinks..."
 cd ~/dotfiles
 stow hypr
 stow ghostty
+stow yazi
 # stow kitty
 
 echo ":white_check_mark: Dotfiles installed!"
