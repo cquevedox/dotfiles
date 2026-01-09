@@ -55,7 +55,8 @@ window#waybar {
 #cpu,
 #memory,
 #battery,
-#tray {
+#tray,
+#custom-notification {
     padding: 0 12px;
     margin: 4px 2px;
     border-radius: 8px;
@@ -102,4 +103,8 @@ window#waybar {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
+}
+
+#custom-notification {
+    color: #7dcfff;
 }
