@@ -21,7 +21,7 @@ echo -e "${BLUE}💾 Backing up existing configs...${NC}"
 BACKUP_DIR="$HOME/.config-backup/$(date +%Y%m%d-%H%M%S)"
 mkdir -p "$BACKUP_DIR"
 
-for config in hypr ghostty yazi waybar zsh; do
+for config in hypr ghostty yazi waybar swaync zsh; do
 	if [ -d "$HOME/.config/$config" ]; then
 		echo -e "${YELLOW}  Backing up $config...${NC}"
 		cp -r "$HOME/.config/$config" "$BACKUP_DIR/"
@@ -40,6 +40,7 @@ echo -e "${BLUE}🗑️ Removing existing configs...${NC}"
 [ -d ~/.config/ghostty ] && rm -rf ~/.config/ghostty
 [ -d ~/.config/yazi ] && rm -rf ~/.config/yazi
 [ -d ~/.config/waybar ] && rm -rf ~/.config/waybar
+[ -d ~/.config/swaync ] && rm -rf ~/.config/swaync
 [ -f ~/.zshrc ] && rm -f ~/.zshrc
 
 # Apply dotfiles with Stow
@@ -50,6 +51,7 @@ stow hypr
 stow ghostty
 stow yazi
 stow waybar
+stow swaync
 stow zsh
 
 echo ""
