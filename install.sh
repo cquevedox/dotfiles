@@ -10,6 +10,12 @@ NC='\033[0m'
 echo -e "${BLUE}🚀 Installing Hyprland Rice...${NC}"
 echo ""
 
+# Check if running in Arch Linux
+if [ ! -f /etc/arch-release ]; then
+	echo -e "${RED}❌ This script is designed for Arch Linux${NC}"
+	exit 1
+fi
+
 # Check if stow is installed
 if ! command -v stow &> /dev/null; then
 	echo -e "${YELLOW}📦 Installing GNU Stow...${NC}"
